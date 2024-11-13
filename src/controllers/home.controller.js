@@ -8,9 +8,9 @@ async function getRecipes() {
 
 function renderRecipes(recipes, container) {
   container.innerHTML = '';
-
+  
   recipes.forEach((recipe) => {
-    const { strMeal, strMealThumb, strInstructions } = recipe;
+    const { strMeal, strMealThumb, strInstructions, idMeal } = recipe;
 
     const recipeCard = document.createElement('div');
     recipeCard.classList.add('col-md-4', 'mb-4');
@@ -20,7 +20,7 @@ function renderRecipes(recipes, container) {
         <div class="card-body">
           <h5 class="card-title">${strMeal}</h5>
           <p class="card-text">${strInstructions.substring(0, 100)}...</p>
-          <button class="btn btn-primary">Ver Más</button>
+          <a href="#/receta-detalle/${idMeal}" class="btn btn-primary">Ver Más</a>
         </div>
       </div>
     `;
@@ -28,6 +28,7 @@ function renderRecipes(recipes, container) {
     container.appendChild(recipeCard);
   });
 }
+
 
 export default async () => {
   const divElement = document.createElement('div');
