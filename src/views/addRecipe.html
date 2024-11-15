@@ -1,1 +1,56 @@
-<h1>...working</h1>
+<div class="container mt-4">
+  <h2>Agregar Nueva Receta</h2>
+  <form id="recipe-form">
+    <div class="mb-3">
+      <label for="name" class="form-label">Nombre de la Receta</label>
+      <input
+        type="text"
+        id="name"
+        class="form-control"
+        placeholder="Ej: Arepa con queso"
+        required
+      />
+    </div>
+    <div class="mb-3">
+      <label for="ingredients" class="form-label">Ingredientes</label>
+      <textarea
+        id="ingredients"
+        class="form-control"
+        placeholder="Ej: Harina, Azúcar, Huevos"
+        required
+      ></textarea>
+    </div>
+    <div class="mb-3">
+      <label for="time" class="form-label"
+        >Tiempo de Preparación (minutos)</label
+      >
+      <input
+        type="number"
+        id="time"
+        class="form-control"
+        placeholder="Ej: 45"
+        required
+      />
+    </div>
+    <div class="mb-3">
+      <label for="instructions" class="form-label">Instrucciones</label>
+      <textarea
+        id="instructions"
+        class="form-control"
+        placeholder="Describe los pasos"
+        required
+      ></textarea>
+    </div>
+    <div class="mb-3">
+      <label for="image" class="form-label">URL de la Imagen</label>
+      <input
+        type="url"
+        id="image"
+        class="form-control"
+        placeholder="Ej: https://example.com/image.jpg"
+        required
+      />
+    </div>
+    <button type="submit" class="btn btn-success">Agregar Receta</button>
+  </form>
+</div>
